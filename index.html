@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body class="bg__color col">
+  <main class="row container">
+    <!-- Sign-up form start -->
+    <div class="hero" id="replace">
+
+      <div class="row__reverse">
+        <picture id="hero-img">
+          <source srcset="assets/images/illustration-sign-up-desktop.svg" media="(min-width: 1024px)">
+          <img class="hero__img" src="assets/images/illustration-sign-up-mobile.svg">
+        </picture>
+
+        <div class="hero__text--div" id="text-div">
+
+          <div>
+            <h1 class="hero__title font__title">Stay updated!</h1>
+            <p class="hero__text">Join 60,000+ product managers receiving monthly updates on:</p>
+
+            <ul class="list__style">
+              <li class="list__item"><img class="marker" src="./assets/images/icon-list.svg">Product discovery and
+                building what matters</li>
+              <li class="list__item"><img class="marker" src="./assets/images/icon-list.svg">Measuring to ensure updates
+                are a success</li>
+              <li class="list__item"><img class="marker" src="./assets/images/icon-list.svg">And much more!</li>
+            </ul>
+          </div>
+
+          <div class="col">
+            <label for="email" class="email__label font__sm">Email address <span class="hidden" id="error-text">Valid
+                email
+                required</span></label>
+            <input type="email" id="email" class="email__input" placeholder="email@company.com" required>
+            <button type="button" class="btn subscribe__btn font__bold" id="submit-btn">Subscribe to
+              monthly
+              newsletter</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Sign-up form end -->
+    <div class="dialog__style col hidden" id="success-dialog">
+      <div class="col dialog__text">
+        <img class="success__icon" src="./assets/images/icon-success.svg">
+        <h1 class="success__title font__title">Thanks for subscribing!</h1>
+        <p class="success__text">A confirmation email has been sent to <a class="link__style" href=""
+            id="user-email"><strong>ash@loremcompany.com</strong></a>.
+          Please open it and click the button inside to confirm your subscription.</p>
+        <button class="btn success__btn success__btn--bg" id="dismiss-btn">Dismiss message</button>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="attribution">
+      <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.</p>
+      <p>Coded by <a href="#">@shruticodes01</a>.</p>
+    </div>
+  </footer>
+  <script src="main.js"></script>
+</body>
+
+</html>
