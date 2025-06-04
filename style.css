@@ -235,6 +235,10 @@ body {
     text-wrap: stable;
 }
 
+.success__btn {
+    filter: drop-shadow(0 0.5rem 1rem hsl(4, 100%, 67%, 0.8));
+}
+
 .success__btn--bg {
     background: linear-gradient(90deg, #FF6A3A, #FF527B);
     border: 1px solid var(--Red);
