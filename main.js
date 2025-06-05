@@ -3,9 +3,9 @@
 const email = document.querySelector("#email");
 const emailLabel = document.querySelector(".email__label");
 const btnSubmit = document.querySelector("#submit-btn");
-const subscribeBtn = document.querySelector(".subscribe__btn");
 const span = document.querySelector("#error-text");
 const btnDismiss = document.querySelector("#dismiss-btn");
+const dimissBtn = document.querySelector(".dismiss__btn");
 const replaceContainer = document.querySelector("#replace");
 const updateDialogEmail = document.querySelector("#user-email");
 const dialog = document.querySelector("#success-dialog");
@@ -14,6 +14,11 @@ dialog.returnValue = "email";
 const replaceTimer = function () {
   replaceContainer.classList.add("hidden");
   dialog.classList.remove("hidden");
+};
+
+const dismissTimer = function () {
+  dialog.classList.add("hidden");
+  replaceContainer.classList.remove("hidden");
 };
 
 const isValidEmail = function (userInput) {
@@ -33,8 +38,6 @@ const validationHandler = function () {
     span.style.color = "hsl(4, 100%, 67%)";
   } else {
     span.classList.add("hidden");
-    subscribeBtn.classList.add("success__btn--bg");
-
     setTimeout(replaceTimer, 300);
     updateDialogEmail.href = "mailto:" + email.value;
     updateDialogEmail.innerHTML = email.value;
@@ -53,7 +56,5 @@ const handleSubmit = (event) => {
 email.addEventListener("change", handleInput);
 btnSubmit.addEventListener("click", handleSubmit);
 btnDismiss.addEventListener("click", function () {
-  dialog.classList.add("hidden");
-  replaceContainer.classList.remove("hidden");
-  subscribeBtn.classList.remove("success__btn--bg");
+  setTimeout(dismissTimer, 300);
 });

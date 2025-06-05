@@ -117,9 +117,20 @@ body {
 
 .btn {
     padding: 1rem 3rem;
-    border-radius: 0.5rem;
+    background: var(--Blue-800);
     color: var(--White);
+    border: 1px solid var(--Blue-800);
+    border-radius: 0.5rem;
     line-height: 150%;
+
+}
+
+.btn:hover,
+.btn:active,
+.btn:focus {
+    background: linear-gradient(90deg, #FF6A3A, #FF527B);
+    border: 1px solid var(--Red);
+    filter: drop-shadow(0 0.5rem 1rem hsl(4, 100%, 67%, 0.8));
 }
 
 .hidden {
@@ -204,11 +215,6 @@ body {
     border: 1px solid var(--Red);
 }
 
-.subscribe__btn {
-    background: var(--Blue-800);
-    border: 1px solid var(--Blue-800);
-}
-
 .dialog__style {
     height: 100vh;
     margin: 0 auto;
@@ -233,15 +239,6 @@ body {
 .success__text {
     margin-bottom: auto;
     text-wrap: stable;
-}
-
-.success__btn {
-    filter: drop-shadow(0 0.5rem 1rem hsl(4, 100%, 67%, 0.8));
-}
-
-.success__btn--bg {
-    background: linear-gradient(90deg, #FF6A3A, #FF527B);
-    border: 1px solid var(--Red);
 }
 
 .attribution {
